@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrib Canines</title>
+    <link rel="stylesheet" href="CSS.css">
+    
+</head>
+<body>
+    <header>
+        <div class="insignia">
+            <img id="home" src="corribInsignia1.png">
+        </div>
+        <nav style="margin-right: 10px;">
+            <a class="float" href="#home">Home</a>
+            <a class="float" href="#contact">Contact Us</a>
+        </nav>  
+    </header>
+
+    <div class="parallax">
+        <img src="corribInsignia1.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+    </div>
+
+    <div class="content">
+        <div style="letter-spacing: 2px; text-align:center; color: #ffd951; font-size: 52px; padding-top: 35px;"><b>DOG SITTING<br> AND WALKS</b></div>
+        <br><br><br>
+        
+        <div class="price-container">
+            <div style="color: #fedf70; font-size: 38px; letter-spacing: 1px;"><b>PRICES</b></div>
+            <div style="color: #fedf70; font-size: 38px; letter-spacing: 1px;"><b>SERVICES</b></div>
+            
+            <div class="price-item">
+                <div class="price" ><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">30 minute walk:</b><br>1 dog – €10<br>2 dogs – €15</div>
+                <div class="description">Perfect for a quick bathroom break and some light exercise</div>
+            </div>
+            
+            <div class="price-item">
+                <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">60 minute walk:</b><br>1 dog – €15<br>2 dogs – €20</div>
+                <div class="description">A full hour of exercise, exploration, and enrichment</div>
+            </div>
+            
+            <div class="price-item">
+                <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">bulk discounts:</b><br>3 × 60 min walks = €40<br>3 × 30 min walks = €25</div>
+                <div class="description"><a href="#contact">Enquire about discounts</a> on larger orders or multiple dogs</div>
+            </div>
+            
+            <div class="price-item">
+                <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">daily check-ins (per day):</b><br>1–2 dogs – €30<br>3–5 dogs – €25<br>6+ dogs – €20</div>
+                <div class="description">Daily check-ins consist of a morning & evening visit, 1–2 walks, feeding, toilet & playtime. Additionally, any grooming such as brushing, medicines etc.</div>
+            </div>
+            
+            <div class="price-item">
+                <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">overnight care (per day):</b><br>1–3 days – €50<br>3–5 days – €45<br>6+ days – €40</div>
+                <div class="description"><b>Overnight care:</b><br> This is a full service dedicated to keeping your dog's routine as consistent and stress-free as possible while you're away. Your dog stays in the comfort of their own home with the full attention of a trusted caregiver.<br><br>Whether your dog struggles with loneliness, needs medication, or simply thrives off human company, this will be a personalised service built entirely around their needs. I'm there throughout the day and night to provide meals, walks, medication, activities, and anything else they require.</div>
+            </div>
+            
+            <div class="price-item">
+                <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">meet & greet:</b><br>€5 per visit</div>
+                <div class="description">Get to know each other before committing to regular services</div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div id="contact" style="margin-top: 80px; margin-bottom: 60px;">
+            <div style="letter-spacing: 2px; text-align:center; color: #ffd951; font-size: 42px; margin-bottom: 40px;"><b>GET IN TOUCH</b></div>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="30min-walk">30 Minute Walk</option>
+                        <option value="60min-walk">60 Minute Walk</option>
+                        <option value="bulk-discount">Bulk Discounts</option>
+                        <option value="daily-checkin">Daily Check-ins</option>
+                        <option value="overnight-care">Overnight Care</option>
+                        <option value="meet-greet">Meet & Greet</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="config.js"></script>
+<script src="java.js"></script>
+</html>
