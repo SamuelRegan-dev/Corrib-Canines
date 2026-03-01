@@ -1,0 +1,7 @@
+.idea/
+js/config.js
+# Local Netlify folder
+.netlify
+
+.env
+node_modules/

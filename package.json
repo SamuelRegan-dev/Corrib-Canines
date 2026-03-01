@@ -1,0 +1,24 @@
+ {
+  "name": "corribcanines",
+  "version": "1.0.0",
+  "description": "Website for Corrib Canines, a local dog sitting and walking service. Built with HTML, CSS and JavaScript. (in development)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelRegan-dev/Corrib-Canines.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SamuelRegan-dev/Corrib-Canines/issues"
+  },
+  "homepage": "https://github.com/SamuelRegan-dev/Corrib-Canines#readme",
+  "dependencies": {
+    "nodemailer": "^8.0.1"
+  }
+}
