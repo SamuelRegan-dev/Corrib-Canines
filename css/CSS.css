@@ -2,7 +2,6 @@
     background-image: url("../assets/images/corrib6.jpg");
     height: 1000px;
     background-attachment: scroll;
-    background-position: center;
     background-size: cover;
     position: relative;
     will-change: transform;

@@ -1,5 +1,4 @@
-
-const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 
 // Cache DOM elements for better performance
 const header = document.querySelector('header');
@@ -16,7 +15,7 @@ let ticking = false;
 function updateScrollEffects() {
     header.classList.toggle('scrolled', window.scrollY > 50);
 
-    if (parallax) {
+    if (parallax && !isTouchDevice) {
         parallax.style.backgroundPositionY = window.scrollY * 0.5 + 'px';
     }
 
