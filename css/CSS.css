@@ -241,6 +241,9 @@ html {
         background-size: cover;
         background-position: center center;
         background-attachment: scroll;
+        will-change: backgroundPositionY;
+        transform: translateZ(0);
+        -webkit-overflow-scrolling: touch;
     }
 
     .contact-form {

@@ -1,3 +1,6 @@
+
+const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
 // Cache DOM elements for better performance
 const header = document.querySelector('header');
 const parallax = document.querySelector('.parallax');
@@ -13,7 +16,7 @@ let ticking = false;
 function updateScrollEffects() {
     header.classList.toggle('scrolled', window.scrollY > 50);
 
-    if (parallax && !isTouchDevice) {
+    if (parallax) {
         parallax.style.backgroundPositionY = window.scrollY * 0.5 + 'px';
     }
 
@@ -26,9 +29,6 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 });
-
-// Custom smooth scroll with wheel (desktop only)
-const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
 if (!isTouchDevice) {
     window.addEventListener('wheel', e => {
