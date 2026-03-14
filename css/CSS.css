@@ -221,7 +221,7 @@ html {
 }
 
 /* Mobile Responsive */
-@media (max-width: 1280px) {
+@media (max-width: 1000px) {
     .insignia img {
         height: 5vw;
         width: 5vw;
