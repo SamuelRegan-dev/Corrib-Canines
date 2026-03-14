@@ -145,7 +145,7 @@ h1, h2 {
 }
 
 html {
-    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
 }
 
 /* Contact Form Styles */

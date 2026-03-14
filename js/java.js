@@ -1,4 +1,4 @@
-const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+const isTouchDevice = window.matchMedia('(any-pointer: coarse)').matches
 
 // Cache DOM elements for better performance
 const header = document.querySelector('header');

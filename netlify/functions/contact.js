@@ -58,6 +58,10 @@ exports.handler = async (event) => {
         return { statusCode: 403, body: JSON.stringify({ error: 'reCAPTCHA failed.' }) };
     }
 
+    console.log("USER:", process.env.EMAIL_USER);
+    console.log("PASS LENGTH:", process.env.EMAIL_PASS?.length);
+
+
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
