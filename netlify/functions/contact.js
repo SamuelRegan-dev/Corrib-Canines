@@ -74,7 +74,8 @@ exports.handler = async (event) => {
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
-            subject: `New enquiry from ${name}`,
+            replyTo: email,
+            subject: `New enquiry from ${name} (${email})`,
             text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}`,
         });
 
