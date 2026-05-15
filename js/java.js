@@ -62,8 +62,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+//lazy load recaptcha on submission interaction
+let recaptchaLoaded = false;
+
+function loadRecaptcha() {
+    if (recaptchaLoaded) return;
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?render=6LdN8ngsAAAAAPS2vcz2-iZj8Hzjg_5Euuyt57Y9';
+    document.head.appendChild(script);
+    recaptchaLoaded = true;
+}
+
 // Handle form submission
 if (contactForm) {
+    contactForm.addEventListener('focusin', loadRecaptcha, { once: true });
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
