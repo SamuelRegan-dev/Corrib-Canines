@@ -2,7 +2,7 @@
 
 Website for a local dog walking and sitting business based in Galway.
 
-(https://corribcanines.netlify.app/)
+(https://corribcanines.ie/)
 ## Tech Stack
 - HTML/CSS/JS
 - Netlify Functions (serverless)
