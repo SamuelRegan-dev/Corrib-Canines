@@ -1,8 +1,9 @@
 .parallax {
     background-image: url("../assets/images/corrib6.webp");
-    height: 1000px;
+    height: 110dvh;
     background-attachment: scroll;
     background-size: cover;
+    background-position: center center;
     position: relative;
     will-change: transform;
 }
@@ -135,7 +136,18 @@ p {
     padding-bottom: 4px;
 }
 
-h1, h2 {
+h1 {
+    font-size: 52px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffd951;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 35px;
+    margin: 0;
+}
+
+h2 {
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -238,13 +250,24 @@ html {
     }
 
     .parallax {
-        height: 100dvh;
+        height: 105dvh;
         background-size: cover;
         background-position: center center;
         background-attachment: scroll;
         will-change: backgroundPositionY;
         transform: translateZ(0);
         -webkit-overflow-scrolling: touch;
+    }
+
+    h1 {
+        font-size: 10vw;
+        letter-spacing: 1vw;
+        text-align: center;
+        color: #ffd951;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 8vw;
+        margin: 0;
     }
 
     .contact-form {

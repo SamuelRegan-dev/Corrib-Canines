@@ -9,6 +9,23 @@
     <link rel="icon" type="image/png" href="/assets/images/corribFavicon1.webp">
     <link rel="apple-touch-icon" href="/assets/images/corribInsigniaSmall.webp">
     <link rel="preload" as="image" href="assets/images/corrib6.webp">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Corrib Canines",
+            "description": "Professional dog walking and sitting in Galway",
+            "url": "https://corribcanines.ie",
+            "address": {
+                "addressRegion": "Galway",
+                "addressCountry": "IE"
+            },
+            "areaServed": "Galway",
+            "priceRange": "€15-€50"
+        }
+    </script>
+
 </head>
 <body>
 <header>
@@ -28,7 +45,7 @@
 </div>
 
 <div class="content">
-    <div style="letter-spacing: 2px; text-align:center; color: #ffd951; font-size: 52px; padding-top: 35px;"><b>DOG SITTING<br> AND WALKS</b></div>
+    <h1 >DOG SITTING<br> AND WALKS</h1>
     <br><br><br>
 
     <div class="price-container">
@@ -37,27 +54,32 @@
 
         <div class="price-item">
             <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">30 minute walk:</b><br>1 dog – €15<br>2 dogs – €20</div>
-            <div class="description">Perfect for a quick bathroom break and some light exercise</div>
+            <div class="description">Perfect for a quick bathroom break and some light exercise.</div>
         </div>
 
         <div class="price-item">
             <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">60 minute walk:</b><br>1 dog – €20<br>2 dogs – €25</div>
-            <div class="description">A full hour of exercise, exploration, and enrichment</div>
+            <div class="description">A full hour of exercise, exploration, and enrichment.</div>
         </div>
 
         <div class="price-item">
-            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">daily check-ins:</b><br>€30 per day</div>
+            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">Daily check-ins:</b><br>€30 per day</div>
             <div class="description">Daily check-ins consist of a morning & evening visit, 1–2 walks, feeding, toilet & playtime. Additionally, any grooming such as brushing, medicines etc.</div>
         </div>
 
         <div class="price-item">
-            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">overnight care (per day):</b><br>1–3 days – €50<br>3–5 days – €45<br>6+ days – €40</div>
+            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">Late night stays:</b><br>€40 a night</div>
+            <div class="description">This service includes a morning check in, two walks, during the day, treats, plenty of company in the evening, and settling your dog in for bed before I leave for the night.</div>
+        </div>
+
+        <div class="price-item">
+            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">Overnight care (per day):</b><br>1–3 days – €50<br>3–5 days – €45<br>6+ days – €40</div>
             <div class="description"><b>Overnight care:</b><br> This is a full service dedicated to keeping your dog's routine as consistent and stress-free as possible while you're away. Your dog stays in the comfort of their own home with the full attention of a trusted caregiver.<br><br>Whether your dog struggles with loneliness, needs medication, or simply thrives off human company, this will be a personalised service built entirely around their needs. I'm there throughout the day and night to provide meals, walks, medication, activities, and anything else they require.</div>
         </div>
 
         <div class="price-item">
-            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">meet & greet:</b><br>€5 per visit</div>
-            <div class="description">Get to know each other before committing to regular services</div>
+            <div class="price"><b style="color: #fedf70; font-size: 18px; letter-spacing: 1px;">Meet & greet:</b><br>€10 per visit</div>
+            <div class="description">Get to know each other before committing to regular services.</div>
         </div>
     </div>
 
@@ -88,6 +110,7 @@
                     <option value="30min-walk">30 Minute Walk</option>
                     <option value="60min-walk">60 Minute Walk</option>
                     <option value="daily-checkin">Daily Check-ins</option>
+                    <option value="Late night stays">Late night stays</option>
                     <option value="overnight-care">Overnight Care</option>
                     <option value="meet-greet">Meet & Greet</option>
                 </select>
