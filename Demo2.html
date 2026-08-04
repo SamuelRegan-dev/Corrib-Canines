@@ -6,7 +6,7 @@
     <title>Corrib Canines | Demo 2</title>
     <link rel="stylesheet" href="css/cssDemo2.css">
     <link rel="icon" type="image/png" href="assets/images/corribFavicon1.webp">
-    <link rel="preload" as="image" href="assets/images/corrib6.webp">
+    <link rel="preload" as="image" href="assets/images/CorribDemoImg9.jpg">
 </head>
 <body>
 <header>
@@ -17,12 +17,15 @@
 </header>
 
 <section class="hero" id="home">
-    <!-- Placeholders so the crossfade is visible. Swap each for:
-         <img class="slide is-active" src="assets/images/…" alt="…"> -->
     <div class="slides">
-        <div class="slide is-active"><span>Image 1</span></div>
-        <div class="slide"><span>Image 2</span></div>
-        <div class="slide"><span>Image 3</span></div>
+        <img class="slide is-active" src="assets/images/CorribDemoImg9.jpg"
+             alt="A dalmatian and a white husky on a walk beside a lake" fetchpriority="high">
+        <!-- Not lazy: both are needed within 7s and 14s of load, and a
+             deferred slide crossfades in blank. -->
+        <img class="slide" src="assets/images/CorribDemoImg8.jpg"
+             alt="A German shepherd on a lead by the shore at low tide">
+        <img class="slide" src="assets/images/CorribDemoImg5.jpg"
+             alt="A husky puppy being carried indoors">
     </div>
     <button class="slide-next" type="button" aria-label="Next image">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
@@ -40,20 +43,20 @@
             <a class="pill reveal" href="#about">About us</a>
         </div>
 
-        <div class="socials reveal">
-            <a href="#" aria-label="Corrib Canines on Instagram">
+        <div class="socials">
+            <a class="icon-reveal" href="#" aria-label="Corrib Canines on Instagram">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                     <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
                     <circle cx="12" cy="12" r="4.4"/>
                     <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
                 </svg>
             </a>
-            <a href="#" aria-label="Corrib Canines on Facebook">
+            <a class="icon-reveal" href="#" aria-label="Corrib Canines on Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/>
                 </svg>
             </a>
-            <a href="#" aria-label="Corrib Canines on X">
+            <a class="icon-reveal" href="#" aria-label="Corrib Canines on X">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.96 6.82H1.69l7.73-8.84L1.27 2.25h6.82l4.71 6.23 5.44-6.23zm-1.16 17.52h1.83L7.08 4.13H5.11l11.97 15.64z"/>
                 </svg>

@@ -64,7 +64,58 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
 
-reveals.forEach(el => observer.observe(el));
+// Everything except the hero. Hero elements are on screen from the start, so
+// the observer would mark them visible the moment it runs — well before the
+// load event fires — and the staggered entry would never be seen.
+reveals.forEach(el => {
+    if (el.closest('.hero')) return;
+    observer.observe(el);
+});
+
+// The hero fades in on page load rather than waiting to be scrolled into view:
+// title, then each button 0.2s apart, then the social icons one at a time.
+// Driven here rather than with CSS transition-delay, which would stay on the
+// element and lag its hover too.
+const HERO_SEQUENCE = [
+    ['h1', 0],
+    ['.hero-links .pill:nth-child(1)', 700],
+    ['.hero-links .pill:nth-child(2)', 900],
+    ['.hero-links .pill:nth-child(3)', 1100],
+    ['.socials a:nth-child(1)', 1300],
+    ['.socials a:nth-child(2)', 1500],
+    ['.socials a:nth-child(3)', 1700],
+];
+
+function revealHero() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    const instant = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    HERO_SEQUENCE.forEach(([selector, delay]) => {
+        const el = hero.querySelector(selector);
+        if (!el) return;
+        observer.unobserve(el);
+        if (instant) {
+            el.classList.add('visible');
+        } else {
+            setTimeout(() => el.classList.add('visible'), delay);
+        }
+    });
+
+    // Anything in the hero the sequence didn't name still needs revealing.
+    hero.querySelectorAll('.reveal, .icon-reveal').forEach(el => {
+        if (el.classList.contains('visible')) return;
+        if (HERO_SEQUENCE.some(([sel]) => el.matches(sel))) return;
+        observer.unobserve(el);
+        el.classList.add('visible');
+    });
+}
+
+if (document.readyState === 'complete') {
+    setTimeout(revealHero, 50);
+} else {
+    window.addEventListener('load', () => setTimeout(revealHero, 50));
+}
 
 // Smooth anchor navigation, matching index.html's behaviour.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
